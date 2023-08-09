@@ -99,7 +99,7 @@ const changeTheme = function (e) {
 // Generate Job HTML
 const generateJobHtml = function (data) {
   const html = `
-      <div class="bg-white rounded-0.6rem flex flex-col items-start gap-6 p-6 job-box transition-all duration-300">
+      <div class="bg-white rounded-0.6rem flex flex-col items-start gap-6 p-6 job-box transition-all duration-300 dark:bg-very-dark-blue">
       <div class="w-20 h-20  rounded-3xl -mt-16 flex items-center justify-center" 
       style="background-color: ${data.logoBackground}">
         <img
