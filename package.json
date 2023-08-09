@@ -1,0 +1,15 @@
+{
+  "name": "devjobs-web-app",
+  "version": "1.0.0",
+  "description": "![Design preview for the Devjobs web app coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx tailwindcss -i ./starter-code/style.css -o ./starter-code/css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}

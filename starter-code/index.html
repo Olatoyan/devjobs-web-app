@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | DevJobs Challenge</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body
+    class="font-kumbh font-400 bg-light-grey transition-all duration-300 mid:relative"
+  >
+    <div>
+      <header class="bg-violet h-64 bg-desk-img rounded-header-radius">
+        <div
+          class="max-w-120 mx-auto py-20 px-16 flex justify-between items-center"
+        >
+          <a href="index.html">
+            <img src="assets/desktop/logo.svg" alt="logo" />
+          </a>
+          <div class="flex items-center gap-4">
+            <img src="assets/desktop/icon-sun.svg" alt="sun" />
+            <div class="flex items-center theme-box">
+              <input type="checkbox" id="check" class="select__plan" />
+              <label
+                for="check"
+                class="block w-16 h-8 bg-white rounded-3xl relative before:absolute before:content-[''] before:bg-violet before:w-7 before:h-6 before:rounded-full before:m-1 cursor-pointer hover:before:bg-light-violet"
+              ></label>
+            </div>
+            <img src="assets/desktop/icon-moon.svg" alt="moon" />
+          </div>
+        </div>
+      </header>
+      <main>
+        <section id="display-section" class="px-16 sma:px-8">
+          <section class="pb-32">
+            <section
+              class="max-w-120 mx-auto bg-white rounded-0.6rem flex items-center gap-8 px-8 py-8 -mt-16 input-section transition-all duration-300"
+            >
+              <div
+                class="flex items-center gap-4 border-r border-dark-grey border-opacity-20 h-20 w-1/2 mid:border-r-0 mid:w-full"
+              >
+                <svg class="h-10 w-10 fill-violet">
+                  <use xlink:href="assets/desktop/icon-search.svg#search"></use>
+                </svg>
+                <input
+                  type="text"
+                  placeholder="Filter by title, companies, expertise..."
+                  class="border-0 outline-0 placeholder:text-1.6rem placeholder:opacity-50 placeholder:text-very-dark-blue text-1.6rem leading-norm text-very-dark-blue w-full transition-all duration-300"
+                  id="company-search"
+                />
+              </div>
+              <div
+                class="mid:fixed mid:top-1/2 mid:left-1/2 mid:-translate-x-1/2 mid:-translate-y-1/2 mid:bg-white mid:w-11/12 mid:rounded-0.5rem mid:z-20 mid:opacity-0 mid:invisible pop-up w-full"
+              >
+                <div
+                  class="flex items-center w-full gap-8 mid:flex-col mid:p-8"
+                >
+                  <div
+                    class="flex items-center gap-4 border-r border-dark-grey border-opacity-20 h-20 w-full mid:border-b mid:border-r-0"
+                  >
+                    <img
+                      src="assets/desktop/icon-location.svg"
+                      alt="location"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Filter by location..."
+                      class="border-0 outline-0 placeholder:text-1.6rem placeholder:opacity-50 placeholder:text-very-dark-blue text-1.6rem leading-norm text-very-dark-blue w-full transition-all duration-300"
+                      id="location-search"
+                    />
+                  </div>
+                  <div
+                    class="flex items-center gap-6 w-full justify-around mid:flex-col mid:items-stretch"
+                  >
+                    <div class="flex items-center gap-4">
+                      <input type="checkbox" id="checkbox" class="opacity-0" />
+                      <label
+                        for="checkbox"
+                        class="h-10 w-10 bg-very-dark-blue bg-opacity-10 rounded-0.3rem -ml-12 cursor-pointer hover:bg-violet hover:bg-opacity-25 z-10 transition-all duration-300 check-box"
+                      ></label>
+                      <p
+                        class="text-very-dark-blue text-1.6rem font-700 leading-norm check-text transition-all duration-300 max:text-1.4rem"
+                      >
+                        Full Time Only
+                      </p>
+                    </div>
+                    <button
+                      type="submit"
+                      class="text-1.6rem text-white font-700 leading-norm py-5 px-14 bg-violet rounded-0.5rem hover:bg-light-violet transition-all duration-300 max:px-6 max:text-1.4rem"
+                      id="search-button"
+                    >
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hidden mid:flex items-center gap-8">
+                <svg
+                  class="h-8 w-16 fill-dark-grey transition-all duration-300 filter"
+                >
+                  <use xlink:href="assets/mobile/icon-filter.svg#filter"></use>
+                </svg>
+                <button class="bg-violet p-4 rounded-0.5rem">
+                  <svg class="h-10 w-10 fill-white small-search">
+                    <use
+                      xlink:href="assets/desktop/icon-search.svg#search"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </section>
+          </section>
+
+          <section class="pb-40" id="top-section">
+            <section
+              id="main__section"
+              class="max-w-120 mx-auto grid grid-cols-3 pb-28 gap-x-12 gap-y-24 max:grid-cols-2 smid:grid-cols-1"
+            >
+              <div class="bg-white flex flex-col items-start gap-6 p-6 job-box">
+                <div
+                  class="py-8 -mt-16 rounded-3xl px-2"
+                  style="background-color: red"
+                >
+                  <img src="assets/logos/scoot.svg" alt="scoot" class="" />
+                </div>
+                <div class="flex items-center gap-4">
+                  <p class="text-dark-grey text-1.6rem leading-norm">5h ago</p>
+                  <div class="h-2 w-2 bg-dark-grey rounded-full"></div>
+                  <p class="text-dark-grey text-1.6rem leading-norm">
+                    Full Time
+                  </p>
+                </div>
+                <h2
+                  class="text-very-dark-blue text-2rem font-700 leading-norm hover:text-dark-grey cursor-pointer transition-all duration-300 job-title"
+                >
+                  Senior Software Engineer
+                </h2>
+                <p class="text-dark-grey text-1.6rem leading-norm">Scoot</p>
+                <p class="text-violet text-1.4rem font-700 leading-norm mt-12">
+                  United Kingdom
+                </p>
+              </div>
+            </section>
+            <div class="flex justify-center">
+              <p
+                id="load-more"
+                class="text-center text-1.6rem font-700 leading-norm py-6 px-12 rounded-0.6rem bg-violet hover:bg-light-violet text-white cursor-pointer transition-all duration-300 inv"
+              >
+                Load more
+              </p>
+            </div>
+          </section>
+        </section>
+        <section id="job-section" class="hidden">
+          <section class="pb-32">
+            <section class="pb-16">
+              <section
+                class="flex items-center bg-white max-w-73 mx-auto -mt-16 rounded-0.6rem white-bg"
+              >
+                <div
+                  class="h-56 w-56 flex items-center justify-center shrink-0"
+                  style="background-color: red"
+                >
+                  <img src="assets/logos/scoot.svg" alt="scoot" class="w-32" />
+                </div>
+                <div class="flex items-center justify-between w-full px-16">
+                  <div class="flex flex-col">
+                    <h3
+                      class="text-2.4rem font-700 leading-norm text-very-dark-blue"
+                    >
+                      Scoot
+                    </h3>
+                    <p class="text-dark-grey text-1.6rem leading-norm">
+                      scoot.com
+                    </p>
+                  </div>
+                  <a
+                    href="#"
+                    class="text-violet text-1.6rem font-700 leading-norm bg-violet bg-opacity-10 rounded-0.5rem py-6 px-8 transition-all duration-300 hover:bg-opacity-40"
+                    >Company Site</a
+                  >
+                </div>
+              </section>
+            </section>
+
+            <section class="max-w-73 mx-auto p-20 bg-white white-bg">
+              <div class="flex items-center justify-between pb-20">
+                <div class="flex flex-col">
+                  <div class="flex items-center gap-4">
+                    <p class="text-dark-grey text-1.6rem leading-norm">
+                      5h ago
+                    </p>
+                    <div class="h-2 w-2 bg-dark-grey rounded-full"></div>
+                    <p class="text-dark-grey text-1.6rem leading-norm">
+                      Full Time
+                    </p>
+                  </div>
+                  <h2
+                    class="text-very-dark-blue text-2.8rem font-700 leading-norm"
+                  >
+                    Senior Software Engineer
+                  </h2>
+                  <p class="text-violet text-1.4rem font-700 leading-norm">
+                    United Kingdom
+                  </p>
+                </div>
+                <a
+                  href="#"
+                  class="text-white text-1.6rem font-700 leading-norm py-6 px-11 bg-violet rounded-0.6rem transition-all duration-300 hover:bg-light-violet"
+                  >Apply Now</a
+                >
+              </div>
+              <div class="pb-16">
+                <p class="text-dark-grey text-1.6rem leading-2.6rem">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                  Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In
+                  nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed
+                  pretium, ligula sollicitudin laoreet viverra, tortor libero
+                  sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.
+                  Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate
+                  volutpat, eros pede semper est, vitae luctus metus libero eu
+                  augue. Morbi purus libero, faucibus adipiscing, commodo quis,
+                  gravida id, est. Sed lectus. Praesent elementum hendrerit
+                  tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus
+                  a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc
+                  sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum
+                  et, dapibus sed, urna.
+                </p>
+              </div>
+              <div class="flex flex-col gap-11 pb-20">
+                <h4 class="text-very-dark-blue text-2rem font-700 leading-norm">
+                  Requirements
+                </h4>
+                <p class="text-dark-grey text-1.6rem leading-2.6rem">
+                  Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia,
+                  magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae
+                  facilisis libero dolor a purus. Sed vel lacus. Mauris nibh
+                  felis, adipiscing varius, adipiscing in, lacinia vel, tellus.
+                  Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc
+                  tellus ante, mattis eget, gravida vitae, ultricies ac, leo.
+                  Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.
+                </p>
+                <ul>
+                  <li class="flex items-center gap-12">
+                    <div class="w-2 h-2 rounded-full bg-violet"></div>
+                    <span class="text-dark-grey text-1.6rem leading-2.6rem"
+                      >Morbi interdum mollis sapien. Sed</span
+                    >
+                  </li>
+                  <li class="flex items-center gap-12">
+                    <div class="w-2 h-2 rounded-full bg-violet"></div>
+                    <span class="text-dark-grey text-1.6rem leading-2.6rem">
+                      Phasellus lacinia magna a ullamcorper laoreet, lectus arcu
+                      pulvinar risus</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-col gap-11">
+                <h4 class="text-very-dark-blue text-2rem font-700 leading-norm">
+                  What You Will Do
+                </h4>
+                <p class="text-dark-grey text-1.6rem leading-2.6rem">
+                  Sed egestas, ante et vulputate volutpat, eros pede semper est,
+                  vitae luctus metus libero eu augue. Morbi purus libero,
+                  faucibus adipiscing, commodo quis, gravida id, est. Sed
+                  lectus. Praesent elementum hendrerit tortor. Sed semper lorem
+                  at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi
+                  neque euismod dui, eu pulvinar nunc sapien ornare nisl.
+                  Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed,
+                  urna.
+                </p>
+                <ol class="list-decimal">
+                  <li class="text-violet font-700 text-1.6rem leading-2.6rem">
+                    <span class="text-dark-grey font-400 pl-12"
+                      >Morbi interdum mollis sapien. Sed</span
+                    >
+                  </li>
+                  <li class="text-violet font-700 text-1.6rem leading-2.6rem">
+                    <span class="text-dark-grey font-400 pl-12"
+                      >Morbi interdum mollis sapien. Sed</span
+                    >
+                  </li>
+                </ol>
+              </div>
+            </section>
+          </section>
+          <section class="bg-white py-10 white-bg">
+            <div class="max-w-73 mx-auto">
+              <div class="flex items-center justify-between">
+                <div class="flex flex-col">
+                  <h2
+                    class="text-very-dark-blue text-2rem font-700 leading-norm"
+                  >
+                    Senior Software Engineer
+                  </h2>
+                  <p class="text-dark-grey text-1.6rem leading-norm">
+                    So Digital Inc.
+                  </p>
+                </div>
+                <a
+                  href="#"
+                  class="text-white text-1.6rem font-700 leading-norm py-6 px-11 bg-violet rounded-0.6rem transition-all duration-300 hover:bg-light-violet"
+                  >Apply Now</a
+                >
+              </div>
+            </div>
+          </section>
+        </section>
+        <p class="text-6xl text-center error-msg hidden">
+          No Data Found. Try again 😢
+        </p>
+      </main>
+    </div>
+    <div
+      class="bg-black bg-opacity-50 fixed h-full w-full top-0 hidden overlay"
+    ></div>
+  </body>
+</html>

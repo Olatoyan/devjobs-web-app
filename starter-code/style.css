@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 62.5%;
+}
+
+.select__plan:checked + .check {
+  background-color: #a445ed;
+}
+
+.select__plan:checked + .check::before {
+  background-color: #fff;
+}
+.select__plan {
+  display: none;
+}
+
+@layer utilities {
+  #check:checked + label {
+    /* background-color: #a445ed; */
+  }
+  #check + label::before {
+    transform: translateX(0);
+    transition: all 0.3s;
+  }
+
+  #check:checked + label::before {
+    transform: translateX(1.9rem);
+  }
+
+  #checkbox:checked + label {
+    position: relative;
+    background-color: #5964e0;
+  }
+  #checkbox:checked + label::before {
+    content: url(../assets/desktop/icon-check.svg);
+    /* content: ""; */
+    position: absolute;
+    top: 28%;
+    left: 25%;
+    width: 100%;
+    height: 100%;
+  }
+}
