@@ -1168,6 +1168,13 @@ html {
   background-color: rgb(147 155 244 / var(--tw-bg-opacity));
 }
 
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-midnight {
+    --tw-bg-opacity: 1;
+    background-color: rgb(18 23 33 / var(--tw-bg-opacity));
+  }
+}
+
 @media (max-width: 68.75em) {
   .max\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1285,6 +1292,11 @@ html {
   .mid\:bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .mid\:bg-very-dark-blue {
+    --tw-bg-opacity: 1;
+    background-color: rgb(25 32 45 / var(--tw-bg-opacity));
   }
 
   .mid\:p-8 {

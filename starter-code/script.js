@@ -20,6 +20,7 @@ const inputSectionElement = document.querySelector(".input-section");
 const popUp = document.querySelector(".pop-up");
 const filterIconElement = document.querySelector(".filter");
 const overlayElement = document.querySelector(".overlay");
+const smallBoxElement = document.querySelector(".boxx");
 
 // Display Popup and Close Popup Functions
 const displayPopup = function () {
@@ -51,6 +52,8 @@ const changeTheme = function (e) {
     jobTitles.forEach((jobTitle) => jobTitle.classList.add("text-white"));
     inputSectionElement.classList.add("bg-very-dark-blue");
     inputSectionElement.classList.remove("bg-white");
+    smallBoxElement.classList.add("mid:bg-very-dark-blue");
+    smallBoxElement.classList.remove("mid:bg-white");
     companySearchInput.classList.add("bg-very-dark-blue");
     companySearchInput.classList.add("placeholder:text-white");
     companySearchInput.classList.add("text-white");
@@ -73,6 +76,8 @@ const changeTheme = function (e) {
     jobTitles.forEach((jobTitle) => jobTitle.classList.remove("text-white"));
     inputSectionElement.classList.remove("bg-very-dark-blue");
     inputSectionElement.classList.add("bg-white");
+    smallBoxElement.classList.add("mid:bg-white");
+    smallBoxElement.classList.remove("mid:bg-very-dark-blue");
     companySearchInput.classList.remove("bg-very-dark-blue");
     companySearchInput.classList.remove("placeholder:text-white");
     companySearchInput.classList.remove("text-white");
