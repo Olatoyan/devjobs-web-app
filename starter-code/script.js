@@ -20,6 +20,7 @@ const inputSectionElement = document.querySelector(".input-section");
 const popUp = document.querySelector(".pop-up");
 const filterIconElement = document.querySelector(".filter");
 const overlayElement = document.querySelector(".overlay");
+const smallBoxElement = document.querySelector(".boxx");
 
 // Display Popup and Close Popup Functions
 const displayPopup = function () {
@@ -51,6 +52,8 @@ const changeTheme = function (e) {
     jobTitles.forEach((jobTitle) => jobTitle.classList.add("text-white"));
     inputSectionElement.classList.add("bg-very-dark-blue");
     inputSectionElement.classList.remove("bg-white");
+    smallBoxElement.classList.add("mid:bg-very-dark-blue");
+    smallBoxElement.classList.remove("mid:bg-white");
     companySearchInput.classList.add("bg-very-dark-blue");
     companySearchInput.classList.add("placeholder:text-white");
     companySearchInput.classList.add("text-white");
@@ -73,6 +76,8 @@ const changeTheme = function (e) {
     jobTitles.forEach((jobTitle) => jobTitle.classList.remove("text-white"));
     inputSectionElement.classList.remove("bg-very-dark-blue");
     inputSectionElement.classList.add("bg-white");
+    smallBoxElement.classList.add("mid:bg-white");
+    smallBoxElement.classList.remove("mid:bg-very-dark-blue");
     companySearchInput.classList.remove("bg-very-dark-blue");
     companySearchInput.classList.remove("placeholder:text-white");
     companySearchInput.classList.remove("text-white");
@@ -109,7 +114,7 @@ const generateJobHtml = function (data) {
           <p class="text-dark-grey text-1.6rem leading-norm">${data.contract}</p>
         </div>
         <h2
-          class="text-very-dark-blue text-2rem font-700 leading-norm hover:text-dark-grey cursor-pointer transition-all duration-300 job-title"
+          class="text-very-dark-blue text-2rem font-700 leading-norm hover:text-dark-grey cursor-pointer transition-all duration-300 job-title dark:text-white"
         >
           ${data.position}
         </h2>
@@ -127,14 +132,14 @@ const generateMoreInfoHtml = function (data) {
   const displayRequirements = data.requirements.items
     .map((item) => {
       return `<li class=" items-start gap-12 text-violet text-1.6rem leading-2.6rem pl-12">
-      <span class="text-dark-grey text-1.6rem leading-2.6rem grey-text">${item}</span>
+      <span class="text-dark-grey text-1.6rem leading-2.6rem grey-text dark:text-grey">${item}</span>
       </li>`;
     })
     .join("");
   const displayRole = data.role.items
     .map((item) => {
       return `<li class="text-violet font-700 text-1.6rem leading-2.6rem pl-12">
-      <span class="text-dark-grey font-400 grey-text"
+      <span class="text-dark-grey font-400 grey-text dark:text-grey"
         >${item}</span
       >
     </li>`;
@@ -145,7 +150,7 @@ const generateMoreInfoHtml = function (data) {
     <section class="pb-32">
       <section class="pb-16">
         <section
-          class="flex items-center bg-white max-w-73 mx-auto -mt-16 rounded-0.6rem white-bg transition-all duration-300 mid:flex-col mid:gap-10"
+          class="flex items-center bg-white max-w-73 mx-auto -mt-16 rounded-0.6rem white-bg transition-all duration-300 mid:flex-col mid:gap-10 dark:bg-very-dark-blue"
         >
           <div
             class="h-56 w-56 flex items-center justify-center shrink-0 mid:h-24 mid:w-24 mid:-mt-12 mid:rounded-3xl"
@@ -156,7 +161,7 @@ const generateMoreInfoHtml = function (data) {
           <div class="flex items-center justify-between w-full px-16 mid:flex-col mid:gap-11 mid:pb-12">
             <div class="flex flex-col">
               <h3
-                class="text-2.4rem font-700 leading-norm text-very-dark-blue dark-blue transition-all duration-300"
+                class="text-2.4rem font-700 leading-norm text-very-dark-blue dark-blue transition-all duration-300 dark:text-white"
               >
               ${data.company}
               </h3>
@@ -173,7 +178,7 @@ const generateMoreInfoHtml = function (data) {
         </section>
       </section>
 
-      <section class="max-w-73 mx-auto p-20 bg-white rounded-0.6rem white-bg transition-all duration-300 mid:px-9 sma:px-8">
+      <section class="max-w-73 mx-auto p-20 bg-white rounded-0.6rem white-bg transition-all duration-300 mid:px-9 sma:px-8 dark:bg-very-dark-blue">
         <div class="flex items-center justify-between pb-20 mid:flex-col mid:items-stretch mid:gap-20">
           <div class="flex flex-col">
             <div class="flex items-center gap-4">
@@ -186,7 +191,7 @@ const generateMoreInfoHtml = function (data) {
               </p>
             </div>
             <h2
-              class="text-very-dark-blue text-2.8rem font-700 leading-norm dark-blue transition-all duration-300 mid:text-2rem"
+              class="text-very-dark-blue text-2.8rem font-700 leading-norm dark-blue transition-all duration-300 mid:text-2rem dark:text-white"
             >
             ${data.position}
             </h2>
@@ -201,15 +206,15 @@ const generateMoreInfoHtml = function (data) {
           >
         </div>
         <div class="pb-16">
-          <p class="text-dark-grey text-1.6rem leading-2.6rem grey-text transition-all duration-300">
+          <p class="text-dark-grey text-1.6rem leading-2.6rem grey-text transition-all duration-300 dark:text-grey">
             ${data.description}
           </p>
         </div>
         <div class="flex flex-col gap-11 pb-20">
-          <h4 class="text-very-dark-blue text-2rem font-700 leading-norm dark-blue transition-all duration-300">
+          <h4 class="text-very-dark-blue text-2rem font-700 leading-norm dark-blue transition-all duration-300 dark:text-white">
             Requirements
           </h4>
-          <p class="text-dark-grey text-1.6rem leading-2.6rem grey-text transition-all duration-300">
+          <p class="text-dark-grey text-1.6rem leading-2.6rem grey-text transition-all duration-300 dark:text-grey">
            ${data.requirements.content}
           </p>
           <ul class="list-disc flex flex-col gap-2">
@@ -217,10 +222,10 @@ const generateMoreInfoHtml = function (data) {
           </ul>
         </div>
         <div class="flex flex-col gap-11">
-          <h4 class="text-very-dark-blue text-2rem font-700 leading-norm dark-blue transition-all duration-300">
+          <h4 class="text-very-dark-blue text-2rem font-700 leading-norm dark-blue transition-all duration-300 dark:text-white">
             What You Will Do
           </h4>
-          <p class="text-dark-grey text-1.6rem leading-2.6rem grey-text transition-all duration-300">
+          <p class="text-dark-grey text-1.6rem leading-2.6rem grey-text transition-all duration-300 dark:text-grey">
             ${data.role.content}
           </p>
           <ol class="list-decimal flex flex-col gap-2">
@@ -229,12 +234,12 @@ const generateMoreInfoHtml = function (data) {
         </div>
       </section>
     </section>
-    <section class="bg-white p-10 white-bg transition-all duration-300">
+    <section class="bg-white p-10 white-bg transition-all duration-300 dark:bg-very-dark-blue">
       <div class="max-w-73 mx-auto">
         <div class="flex items-center justify-between smid:items-stretch">
           <div class="flex flex-col smid:hidden">
             <h2
-              class="text-very-dark-blue text-2rem font-700 leading-norm dark-blue transition-all duration-300"
+              class="text-very-dark-blue text-2rem font-700 leading-norm dark-blue transition-all duration-300 dark:text-white"
             >
             ${data.position}
             </h2>

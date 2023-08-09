@@ -14,7 +14,7 @@
     <script src="script.js" defer></script>
   </head>
   <body
-    class="font-kumbh font-400 bg-light-grey transition-all duration-300 mid:relative"
+    class="font-kumbh font-400 bg-light-grey transition-all duration-300 mid:relative dark:bg-midnight"
   >
     <div>
       <header class="bg-violet h-64 bg-desk-img rounded-header-radius">
@@ -41,7 +41,7 @@
         <section id="display-section" class="px-16 sma:px-8">
           <section class="pb-32">
             <section
-              class="max-w-120 mx-auto bg-white rounded-0.6rem flex items-center gap-8 px-8 py-8 -mt-16 input-section transition-all duration-300"
+              class="max-w-120 mx-auto bg-white rounded-0.6rem flex items-center gap-8 px-8 py-8 -mt-16 input-section transition-all duration-300 dark:bg-very-dark-blue"
             >
               <div
                 class="flex items-center gap-4 border-r border-dark-grey border-opacity-20 h-20 w-1/2 mid:border-r-0 mid:w-full"
@@ -52,12 +52,12 @@
                 <input
                   type="text"
                   placeholder="Filter by title, companies, expertise..."
-                  class="border-0 outline-0 placeholder:text-1.6rem placeholder:opacity-50 placeholder:text-very-dark-blue text-1.6rem leading-norm text-very-dark-blue w-full transition-all duration-300"
+                  class="border-0 outline-0 placeholder:text-1.6rem placeholder:opacity-50 placeholder:text-very-dark-blue text-1.6rem leading-norm text-very-dark-blue w-full transition-all duration-300 dark:bg-very-dark-blue dark:placeholder:text-white dark:text-white"
                   id="company-search"
                 />
               </div>
               <div
-                class="mid:fixed mid:top-1/2 mid:left-1/2 mid:-translate-x-1/2 mid:-translate-y-1/2 mid:bg-white mid:w-11/12 mid:rounded-0.5rem mid:z-20 mid:opacity-0 mid:invisible pop-up w-full"
+                class="mid:fixed mid:top-1/2 mid:left-1/2 mid:-translate-x-1/2 mid:-translate-y-1/2 mid:bg-white mid:w-11/12 mid:rounded-0.5rem mid:z-20 mid:opacity-0 mid:invisible pop-up w-full boxx dark:mid:bg-very-dark-blue"
               >
                 <div
                   class="flex items-center w-full gap-8 mid:flex-col mid:p-8"
@@ -72,7 +72,7 @@
                     <input
                       type="text"
                       placeholder="Filter by location..."
-                      class="border-0 outline-0 placeholder:text-1.6rem placeholder:opacity-50 placeholder:text-very-dark-blue text-1.6rem leading-norm text-very-dark-blue w-full transition-all duration-300"
+                      class="border-0 outline-0 placeholder:text-1.6rem placeholder:opacity-50 placeholder:text-very-dark-blue text-1.6rem leading-norm text-very-dark-blue w-full transition-all duration-300 dark:bg-very-dark-blue dark:placeholder:text-white dark:text-white"
                       id="location-search"
                     />
                   </div>
@@ -80,13 +80,17 @@
                     class="flex items-center gap-6 w-full justify-around mid:flex-col mid:items-stretch"
                   >
                     <div class="flex items-center gap-4">
-                      <input type="checkbox" id="checkbox" class="opacity-0" />
+                      <input
+                        type="checkbox"
+                        id="checkbox"
+                        class="opacity-0 dark:checked"
+                      />
                       <label
                         for="checkbox"
-                        class="h-10 w-10 bg-very-dark-blue bg-opacity-10 rounded-0.3rem -ml-12 cursor-pointer hover:bg-violet hover:bg-opacity-25 z-10 transition-all duration-300 check-box"
+                        class="h-10 w-10 bg-very-dark-blue bg-opacity-10 rounded-0.3rem -ml-12 cursor-pointer hover:bg-violet hover:bg-opacity-25 z-10 transition-all duration-300 check-box dark:bg-white"
                       ></label>
                       <p
-                        class="text-very-dark-blue text-1.6rem font-700 leading-norm check-text transition-all duration-300 max:text-1.4rem"
+                        class="text-very-dark-blue text-1.6rem font-700 leading-norm check-text transition-all duration-300 max:text-1.4rem dark:text-white"
                       >
                         Full Time Only
                       </p>
@@ -104,7 +108,7 @@
 
               <div class="hidden mid:flex items-center gap-8">
                 <svg
-                  class="h-8 w-16 fill-dark-grey transition-all duration-300 filter"
+                  class="h-8 w-16 fill-dark-grey transition-all duration-300 filter dark:fill-white"
                 >
                   <use xlink:href="assets/mobile/icon-filter.svg#filter"></use>
                 </svg>
